@@ -25,6 +25,16 @@ Nova Connector Builder eliminates the need for engineers to manually write boile
 
 ![Nova Connector Builder — Agentic RAG Architecture](docs/architecture.png)
 
+## 🖥️ Live UI Screenshots
+
+| Main Interface | Knowledge Ingest Panel |
+|---|---|
+| ![Main UI](docs/screenshot_main_ui.png) | ![Ingest Panel](docs/screenshot_ingest.png) |
+
+> The UI shows real-time knowledge base stats: **3,956 connector chunks · 41 Nova framework rules · 4,053 total chunks** in ChromaDB — all ready for RAG retrieval.
+
+---
+
 ### The 5-Phase Agentic Pipeline
 
 ```
