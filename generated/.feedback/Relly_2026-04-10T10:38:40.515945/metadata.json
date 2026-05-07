@@ -1,0 +1,17 @@
+{
+  "connector_name": "Relly",
+  "prompt": "build me o'relly connector",
+  "timestamp": "2026-04-10T10:38:40.515945",
+  "quality_score": 0.5,
+  "files": [
+    "RellyConstants.java",
+    "RellyTestConnection.java",
+    "RellyComponentControl.java",
+    "RellyFlows.java",
+    "Content.js",
+    "relly_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

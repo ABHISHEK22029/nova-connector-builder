@@ -1,0 +1,17 @@
+{
+  "connector_name": "Coursera",
+  "prompt": "Build a Coursera connector with OAuth2 for importing courses as content",
+  "timestamp": "2026-04-10T03:39:51.779238",
+  "quality_score": 0.5,
+  "files": [
+    "CourseraConstants.java",
+    "CourseraTestConnection.java",
+    "CourseraComponentControl.java",
+    "CourseraFlows.java",
+    "Content.js",
+    "coursera_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

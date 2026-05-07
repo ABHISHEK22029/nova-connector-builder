@@ -1,0 +1,17 @@
+{
+  "connector_name": "Udemy",
+  "prompt": "Build a Udemy connector with OAuth2 and content sync. Ensure it uses the Nova framework and matches the data schema.",
+  "timestamp": "2026-05-04T05:03:48.298578",
+  "quality_score": 0.5,
+  "files": [
+    "UdemyConstants.java",
+    "UdemyTestConnection.java",
+    "UdemyComponentControl.java",
+    "UdemyFlows.java",
+    "Content.js",
+    "udemy_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

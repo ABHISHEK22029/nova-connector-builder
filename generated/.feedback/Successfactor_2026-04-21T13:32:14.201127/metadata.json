@@ -1,0 +1,17 @@
+{
+  "connector_name": "Successfactor",
+  "prompt": "create a successfactor connector",
+  "timestamp": "2026-04-21T13:32:14.201127",
+  "quality_score": 0.5,
+  "files": [
+    "SuccessfactorConstants.java",
+    "SuccessfactorTestConnection.java",
+    "SuccessfactorComponentControl.java",
+    "SuccessfactorFlows.java",
+    "Content.js",
+    "successfactor_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "connector_name": "Stripe",
+  "prompt": "Create a Stripe connector with OAuth2 for content sync",
+  "timestamp": "2026-04-10T02:53:39.836645",
+  "quality_score": 1.0,
+  "files": [
+    "StripeConstants.java"
+  ]
+}

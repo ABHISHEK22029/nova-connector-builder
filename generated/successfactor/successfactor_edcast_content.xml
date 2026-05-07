@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<integrationMapping>
+  <mapping source="id" target="EXTERNAL_ID" required="true"/>
+  <mapping source="title" target="TITLE" required="true"/>
+  <mapping source="description" target="DESCRIPTION"/>
+  <mapping source="url" target="LAUNCH_URL"/>
+  <mapping source="imageUrl" target="IMAGE_URL"/>
+  <mapping source="duration" target="DURATION"/>
+  <mapping source="provider" target="PROVIDER_NAME" defaultValue="Successfactor"/>
+  <mapping source="type" target="CONTENT_TYPE" defaultValue="COURSE"/>
+  <mapping source="language" target="LANGUAGE" defaultValue="en"/>
+  <mapping source="lastModifiedDateTime" target="LAST_MODIFIED_DATE"/>
+
+  <!-- Accept filter — controls which records are imported -->
+  <acceptRecord>
+    <filter field="status" value="ACTIVE"/>
+  </acceptRecord>
+</integrationMapping>

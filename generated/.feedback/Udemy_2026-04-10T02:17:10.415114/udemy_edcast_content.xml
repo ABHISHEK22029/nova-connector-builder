@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentMapping>
+    <sourceType name="course">
+        <targetType name="learningAsset">
+            <fieldMapping source="id" target="contentId" required="true"/>
+            <fieldMapping source="title" target="title" required="true"/>
+            <fieldMapping source="headline" target="description"/>
+            <fieldMapping source="url" target="assetUrl"/>
+            <fieldMapping source="image_480x270" target="imageUrl"/>
+            <fieldMapping source="created" target="publishDate">
+                <transformation type="dateFormat" sourcePattern="yyyy-MM-dd'T'HH:mm:ssZ" targetPattern="yyyy-MM-dd"/>
+            </fieldMapping>
+            <fieldMapping source="num_subscribers" target="totalViews"/>
+            <fieldMapping source="avg_rating" target="averageRating"/>
+            <fieldMapping source="num_reviews" target="totalRatings"/>
+            <fieldMapping source="is_paid" target="isPaid">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="price" target="price"/>
+            <fieldMapping source="currency" target="currency"/>
+            <fieldMapping source="locale.title" target="language"/>
+            <fieldMapping source="category.title" target="category"/>
+            <fieldMapping source="subcategory.title" target="subcategory"/>
+            <fieldMapping source="instructional_level" target="level"/>
+            <fieldMapping source="content_length" target="duration">
+                <transformation type="divide" divisor="60"/>
+            </fieldMapping>
+            <fieldMapping source="objectives_summary" target="objective"/>
+            <fieldMapping source="who_should_attend" target="audience"/>
+            <fieldMapping source="what_will_students_learn" target="learningOutcome"/>
+            <fieldMapping source="source_objects.visible_instructors[0].display_name" target="author"/>
+            <fieldMapping source="bestseller_badge_content" target="badge"/>
+            <fieldMapping source="lecture_search_result.count" target="lectureCount"/>
+            <fieldMapping source="is_practice_test_course" target="isPracticeTest">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="tracking_id" target="trackingId"/>
+            <fieldMapping source="visible_instructors[0].image_100x100" target="authorImageUrl"/>
+            <fieldMapping source="last_update_date" target="lastUpdated">
+                <transformation type="dateFormat" sourcePattern="yyyy-MM-dd" targetPattern="yyyy-MM-dd"/>
+            </fieldMapping>
+            <fieldMapping source="এসই_description" target="seoDescription"/>
+            <fieldMapping source="এসই_keywords" target="seoKeywords"/>
+            <fieldMapping source="caption_languages" target="captionLanguages"/>
+            <fieldMapping source="curriculum_items[0].title" target="firstCurriculumTitle"/>
+            <fieldMapping source="primary_category.title" target="primaryCategory"/>
+            <fieldMapping source="primary_subcategory.title" target="primarySubcategory"/>
+            <fieldMapping source="discount.price_string" target="discountPrice"/>
+            <fieldMapping source="discount.price_serve_tracking_id" target="discountTrackingId"/>
+            <fieldMapping source="discount.start_time" target="discountStartTime">
+                <transformation type="dateFormat" sourcePattern="yyyy-MM-dd'T'HH:mm:ssZ" targetPattern="yyyy-MM-dd"/>
+            </fieldMapping>
+            <fieldMapping source="discount.end_time" target="discountEndTime">
+                <transformation type="dateFormat" sourcePattern="yyyy-MM-dd'T'HH:mm:ssZ" targetPattern="yyyy-MM-dd"/>
+            </fieldMapping>
+            <fieldMapping source="instructor_name" target="instructorName"/>
+            <fieldMapping source="instructor_title" target="instructorTitle"/>
+            <fieldMapping source="instructor_bio" target="instructorBio"/>
+            <fieldMapping source="instructor_image" target="instructorImage"/>
+            <fieldMapping source="organization_name" target="organizationName"/>
+            <fieldMapping source="organization_logo" target="organizationLogo"/>
+            <fieldMapping source="is_private" target="isPrivate">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="has_closed_captions" target="hasClosedCaptions">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="estimated_content_length" target="estimatedDuration">
+                <transformation type="divide" divisor="60"/>
+            </fieldMapping>
+            <fieldMapping source="enrollment_count" target="enrollmentCount"/>
+            <fieldMapping source="completion_ratio" target="completionRatio"/>
+            <fieldMapping source="rating" target="rating"/>
+            <fieldMapping source="review_count" target="reviewCount"/>
+            <fieldMapping source="is_in_personal_plan" target="isInPersonalPlan">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].title" target="instructorTitle"/>
+            <fieldMapping source="visible_instructors[0].job_title" target="instructorJobTitle"/>
+            <fieldMapping source="visible_instructors[0].url" target="instructorUrl"/>
+            <fieldMapping source="visible_instructors[0].image_50x50" target="instructorImageSmall"/>
+            <fieldMapping source="visible_instructors[0].image_75x75" target="instructorImageMedium"/>
+            <fieldMapping source="visible_instructors[0].biography" target="instructorBiography"/>
+            <fieldMapping source="visible_instructors[0].created" target="instructorCreated">
+                <transformation type="dateFormat" sourcePattern="yyyy-MM-dd'T'HH:mm:ssZ" targetPattern="yyyy-MM-dd"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].modified" target="instructorModified">
+                <transformation type="dateFormat" sourcePattern="yyyy-MM-dd'T'HH:mm:ssZ" targetPattern="yyyy-MM-dd"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].num_published_courses" target="instructorPublishedCourses"/>
+            <fieldMapping source="visible_instructors[0].num_published_practice_tests" target="instructorPublishedPracticeTests"/>
+            <fieldMapping source="visible_instructors[0].num_reviews" target="instructorReviews"/>
+            <fieldMapping source="visible_instructors[0].num_students" target="instructorStudents"/>
+            <fieldMapping source="visible_instructors[0].avg_rating" target="instructorRating"/>
+            <fieldMapping source="visible_instructors[0].is_featured" target="instructorIsFeatured">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_top_instructor" target="instructorIsTopInstructor">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_for_enterprise" target="instructorIsForEnterprise">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_partner" target="instructorIsPartner">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_affiliate" target="instructorIsAffiliate">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_instructor_resource" target="instructorIsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_support_resource" target="instructorIsSupportResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_marketing_resource" target="instructorIsMarketingResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_sales_resource" target="instructorIsSalesResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_training_resource" target="instructorIsTrainingResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_technical_resource" target="instructorIsTechnicalResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_legal_resource" target="instructorIsLegalResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_compliance_resource" target="instructorIsComplianceResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_security_resource" target="instructorIsSecurityResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_hr_resource" target="instructorIsHrResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_finance_resource" target="instructorIsFinanceResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_operations_resource" target="instructorIsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_it_resource" target="instructorIsItResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_executive_resource" target="instructorIsExecutiveResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_sales_operations_resource" target="instructorIsSalesOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_customer_success_resource" target="instructorIsCustomerSuccessResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_product_resource" target="instructorIsProductResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_engineering_resource" target="instructorIsEngineeringResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_design_resource" target="instructorIsDesignResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_data_science_resource" target="instructorIsDataScienceResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_marketing_operations_resource" target="instructorIsMarketingOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_finance_operations_resource" target="instructorIsFinanceOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_hr_operations_resource" target="instructorIsHrOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_legal_operations_resource" target="instructorIsLegalOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_compliance_operations_resource" target="instructorIsComplianceOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_security_operations_resource" target="instructorIsSecurityOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_it_operations_resource" target="instructorIsItOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_executive_operations_resource" target="instructorIsExecutiveOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_product_operations_resource" target="instructorIsProductOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_engineering_operations_resource" target="instructorIsEngineeringOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_design_operations_resource" target="instructorIsDesignOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_data_science_operations_resource" target="instructorIsDataScienceOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_sales_enablement_resource" target="instructorIsSalesEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_customer_success_enablement_resource" target="instructorIsCustomerSuccessEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_product_enablement_resource" target="instructorIsProductEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_engineering_enablement_resource" target="instructorIsEngineeringEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_design_enablement_resource" target="instructorIsDesignEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_data_science_enablement_resource" target="instructorIsDataScienceEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_marketing_enablement_resource" target="instructorIsMarketingEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_finance_enablement_resource" target="instructorIsFinanceEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_hr_enablement_resource" target="instructorIsHrEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_legal_enablement_resource" target="instructorIsLegalEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_compliance_enablement_resource" target="instructorIsComplianceEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_security_enablement_resource" target="instructorIsSecurityEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_it_enablement_resource" target="instructorIsItEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_executive_enablement_resource" target="instructorIsExecutiveEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_product_enablement_operations_resource" target="instructorIsProductEnablementOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_engineering_enablement_operations_resource" target="instructorIsEngineeringEnablementOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_design_enablement_operations_resource" target="instructorIsDesignEnablementOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_data_science_enablement_operations_resource" target="instructorIsDataScienceEnablementOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_sales_enablement_operations_resource" target="instructorIsSalesEnablementOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_customer_success_enablement_operations_resource" target="instructorIsCustomerSuccessEnablementOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_product_enablement_enablement_resource" target="instructorIsProductEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_engineering_enablement_enablement_resource" target="instructorIsEngineeringEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_design_enablement_enablement_resource" target="instructorIsDesignEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_data_science_enablement_enablement_resource" target="instructorIsDataScienceEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_marketing_enablement_enablement_resource" target="instructorIsMarketingEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_finance_enablement_enablement_resource" target="instructorIsFinanceEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_hr_enablement_enablement_resource" target="instructorIsHrEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_legal_enablement_enablement_resource" target="instructorIsLegalEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_compliance_enablement_enablement_resource" target="instructorIsComplianceEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_security_enablement_enablement_resource" target="instructorIsSecurityEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_it_enablement_enablement_resource" target="instructorIsItEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_executive_enablement_enablement_resource" target="instructorIsExecutiveEnablementEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_sales_operations_enablement_resource" target="instructorIsSalesOperationsEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_customer_success_operations_enablement_resource" target="instructorIsCustomerSuccessOperationsEnablementResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_product_operations_operations_resource" target="instructorIsProductOperationsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_engineering_operations_operations_resource" target="instructorIsEngineeringOperationsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_design_operations_operations_resource" target="instructorIsDesignOperationsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_data_science_operations_operations_resource" target="instructorIsDataScienceOperationsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_marketing_operations_operations_resource" target="instructorIsMarketingOperationsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_finance_operations_operations_resource" target="instructorIsFinanceOperationsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_hr_operations_operations_resource" target="instructorIsHrOperationsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+            <fieldMapping source="visible_instructors[0].is_legal_operations_operations_resource" target="instructorIsLegalOperationsOperationsResource">
+                <transformation type="booleanToString" trueValue="true" falseValue="false"/>
+            </fieldMapping>
+        </targetType>
+    </sourceType>
+</contentMapping>

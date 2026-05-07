@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<integrationMapping>
+  <mapping source="id" target="EXTERNAL_ID" required="true"/>
+  <mapping source="title" target="TITLE" required="true"/>
+  <mapping source="headline" target="DESCRIPTION"/>
+  <mapping source="url" target="LAUNCH_URL"/>
+  <mapping source="image_480x270" target="IMAGE_URL"/>
+  <!-- estimated_content_length is in seconds. Downstream processing (XSLT/Content.js) should convert to minutes if needed. -->
+  <mapping source="estimated_content_length" target="DURATION"/>
+  <mapping source="provider_name" target="PROVIDER_NAME" defaultValue="Udemy"/>
+  <mapping source="content_type" target="CONTENT_TYPE" defaultValue="COURSE"/>
+  <mapping source="primary_locale__locale" target="LANGUAGE" defaultValue="en"/>
+  <mapping source="last_update_date" target="LAST_MODIFIED_DATE"/>
+
+  <!-- Accept filter: Only import courses that are published -->
+  <acceptRecord>
+    <filter field="is_published" value="true"/>
+  </acceptRecord>
+</integrationMapping>

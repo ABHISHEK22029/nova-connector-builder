@@ -1,0 +1,17 @@
+{
+  "connector_name": "Zoom",
+  "prompt": "Build a Zoom connector with OAuth2 client credentials for importing meeting recordings as content",
+  "timestamp": "2026-04-10T02:55:31.726524",
+  "quality_score": 0.5,
+  "files": [
+    "ZoomConstants.java",
+    "ZoomTestConnection.java",
+    "ZoomComponentControl.java",
+    "ZoomFlows.java",
+    "Content.js",
+    "zoom_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

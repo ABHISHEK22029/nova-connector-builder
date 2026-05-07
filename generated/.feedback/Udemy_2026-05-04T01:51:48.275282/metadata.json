@@ -1,0 +1,17 @@
+{
+  "connector_name": "Udemy",
+  "prompt": "build udemy connector",
+  "timestamp": "2026-05-04T01:51:48.275282",
+  "quality_score": 0.5,
+  "files": [
+    "UdemyConstants.java",
+    "UdemyTestConnection.java",
+    "UdemyComponentControl.java",
+    "UdemyFlows.java",
+    "Content.js",
+    "udemy_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

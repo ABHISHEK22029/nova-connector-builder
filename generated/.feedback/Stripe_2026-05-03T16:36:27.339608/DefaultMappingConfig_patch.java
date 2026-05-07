@@ -1,0 +1,8 @@
+STRIPE_SABA_PRODUCT("STRIPE SABA PRODUCT", "IMPORT",
+            com.saba.integration.marketplace.vendor.VendorConstants.STRIPE,
+            com.saba.integration.marketplace.vendor.VendorConstants.SBX,
+            "mpent0123456789abcdef0123456789abcdef",
+            "mpentfedcba9876543210fedcba9876543210",
+            "stripe_edcast_content.xml",
+            "ABCDEF0123456789ABCDEF0123456789AB",
+            true),

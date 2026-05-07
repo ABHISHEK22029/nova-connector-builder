@@ -1,0 +1,17 @@
+{
+  "connector_name": "Hrms",
+  "prompt": "build successfactor hrms connector",
+  "timestamp": "2026-04-10T11:04:18.887714",
+  "quality_score": 0.5,
+  "files": [
+    "HrmsConstants.java",
+    "HrmsTestConnection.java",
+    "HrmsComponentControl.java",
+    "HrmsFlows.java",
+    "Content.js",
+    "hrms_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

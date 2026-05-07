@@ -1,0 +1,17 @@
+{
+  "connector_name": "Stripe",
+  "prompt": "Create a stripe connector",
+  "timestamp": "2026-05-03T16:32:40.629009",
+  "quality_score": 0.5,
+  "files": [
+    "StripeConstants.java",
+    "StripeTestConnection.java",
+    "StripeComponentControl.java",
+    "StripeFlows.java",
+    "Content.js",
+    "stripe_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

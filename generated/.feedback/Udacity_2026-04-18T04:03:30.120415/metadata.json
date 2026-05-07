@@ -1,0 +1,17 @@
+{
+  "connector_name": "Udacity",
+  "prompt": "udacity connector build",
+  "timestamp": "2026-04-18T04:03:30.120415",
+  "quality_score": 0.5,
+  "files": [
+    "UdacityConstants.java",
+    "UdacityTestConnection.java",
+    "UdacityComponentControl.java",
+    "UdacityFlows.java",
+    "Content.js",
+    "udacity_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

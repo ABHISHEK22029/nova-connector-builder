@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<integrationMapping>
+  <mapping source="id" target="EXTERNAL_ID" required="true"/>
+  <mapping source="name" target="TITLE" required="true"/>
+  <mapping source="description" target="DESCRIPTION"/>
+  <mapping source="url" target="LAUNCH_URL"/>
+  <mapping source="images[0]" target="IMAGE_URL"/>
+  <!-- Stripe products do not have a direct 'duration' field -->
+  <mapping source="provider" target="PROVIDER_NAME" defaultValue="Stripe"/>
+  <mapping source="type" target="CONTENT_TYPE" defaultValue="PRODUCT"/>
+  <mapping source="language" target="LANGUAGE" defaultValue="en"/>
+  <mapping source="updated" target="LAST_MODIFIED_DATE"/>
+
+  <!-- Accept filter: Only import active products -->
+  <acceptRecord>
+    <filter field="active" value="true"/>
+  </acceptRecord>
+</integrationMapping>

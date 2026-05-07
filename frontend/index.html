@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Connector Builder — RAG Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/index.css?v=5">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">🚀</div>
+                <div>
+                    <h1>Nova Connector Builder</h1>
+                    <p class="subtitle">RAG-Powered Code Generation</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-ghost" id="statsBtn" onclick="loadStats()">📊 Stats</button>
+                <button class="btn btn-ghost" id="ingestBtn" onclick="runIngestion()">📥 Ingest</button>
+                <div class="status-dot" id="statusDot"></div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Left Panel: Input -->
+            <section class="panel input-panel">
+                <h2>🎯 Generate Connector</h2>
+
+                <!-- API Docs Upload -->
+                <div class="upload-section">
+                    <div class="upload-header" onclick="toggleUpload()">
+                        <span>📄 Upload API Documentation</span>
+                        <span class="chevron" id="uploadChevron">▸</span>
+                    </div>
+                    <div id="uploadBody" class="upload-body hidden">
+                        <p class="upload-hint">Upload the target API docs (Swagger, Markdown, JSON, etc.) so the RAG model understands the vendor's endpoints and schema.</p>
+                        <div class="input-group">
+                            <label for="uploadConnector">Connector name:</label>
+                            <input type="text" id="uploadConnector" placeholder="e.g., stripe, udemy, zoom" />
+                        </div>
+                        <div class="drop-zone" id="dropZone">
+                            <input type="file" id="fileInput" multiple accept=".md,.txt,.json,.yaml,.yml,.html,.pdf" />
+                            <div class="drop-content">
+                                <span class="drop-icon">📁</span>
+                                <p>Drop files here or <span class="drop-link">click to browse</span></p>
+                                <p class="drop-formats">.md, .txt, .json, .yaml, .html</p>
+                            </div>
+                        </div>
+                        <div id="uploadedFiles" class="uploaded-files"></div>
+                        <button class="btn btn-upload" id="uploadBtn" onclick="uploadDocs()" disabled>
+                            📤 Upload & Ingest
+                        </button>
+                        <div id="uploadStatus" class="upload-status hidden"></div>
+                    </div>
+                </div>
+
+                <!-- Prompt Input -->
+                <div class="input-group">
+                    <label for="promptInput">Describe the connector you need:</label>
+                    <textarea 
+                        id="promptInput" 
+                        placeholder="e.g., Create a Stripe connector with OAuth2 for content sync&#10;&#10;Or try: Build a HubSpot integration using API key authentication"
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <div class="options-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="skipValidation">
+                        Skip validation
+                    </label>
+                </div>
+
+                <button class="btn btn-primary" id="generateBtn" onclick="generate()">
+                    <span class="btn-icon">⚡</span> Generate Connector
+                </button>
+
+                <!-- Stats Panel -->
+                <div id="statsPanel" class="stats-panel hidden">
+                    <h3>📊 Knowledge Base</h3>
+                    <div id="statsContent"></div>
+                </div>
+
+                <!-- Progress -->
+                <div id="progressPanel" class="progress-panel hidden">
+                    <h3>🔄 Generation Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText" class="progress-text">Initializing...</p>
+                </div>
+            </section>
+
+            <!-- Right Panel: Output -->
+            <section class="panel output-panel">
+                <h2>📦 Generated Files</h2>
+                <div id="outputContainer">
+                    <div class="empty-state">
+                        <div class="empty-icon">🏗️</div>
+                        <p>Generated connector files will appear here</p>
+                        <p class="hint">Upload API docs → Enter a prompt → Generate</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/app.js?v=5"></script>
+</body>
+</html>

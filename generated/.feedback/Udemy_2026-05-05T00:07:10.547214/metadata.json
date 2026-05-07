@@ -1,0 +1,17 @@
+{
+  "connector_name": "Udemy",
+  "prompt": "Build a Udemy connector. Auth: Basic Auth (client_id + client_secret). API: REST JSON. Entities: content catalog import. Base URL and Portal ID are configurable account settings.",
+  "timestamp": "2026-05-05T00:07:10.547214",
+  "quality_score": 0.5,
+  "files": [
+    "UdemyConstants.java",
+    "UdemyTestConnection.java",
+    "UdemyComponentControl.java",
+    "UdemyFlows.java",
+    "Content.js",
+    "udemy_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}

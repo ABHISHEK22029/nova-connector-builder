@@ -1,0 +1,24 @@
+# Core
+chromadb>=0.4.22
+sentence-transformers>=2.3.0
+langchain>=0.1.0
+langchain-community>=0.0.10
+
+# Embedding model
+torch>=2.0.0
+transformers>=4.36.0
+
+# API & Server
+fastapi>=0.109.0
+uvicorn>=0.25.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Utilities
+pydantic>=2.5.0
+rich>=13.7.0          # Pretty CLI output
+click>=8.1.0          # CLI framework
+tiktoken>=0.5.0       # Token counting
+
+# Testing
+pytest>=7.4.0

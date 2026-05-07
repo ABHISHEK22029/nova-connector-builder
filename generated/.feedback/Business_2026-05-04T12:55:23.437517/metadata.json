@@ -1,0 +1,17 @@
+{
+  "connector_name": "Business",
+  "prompt": "Build a Udemy Business connector. Auth: OAuth2 client_credentials. API: REST JSON. Entities: courses (content import). Base URL configurable.",
+  "timestamp": "2026-05-04T12:55:23.437517",
+  "quality_score": 0.5,
+  "files": [
+    "BusinessConstants.java",
+    "BusinessTestConnection.java",
+    "BusinessComponentControl.java",
+    "BusinessFlows.java",
+    "Content.js",
+    "business_edcast_content.xml",
+    "VendorConstants_patch.java",
+    "DefaultMappingConfig_patch.java",
+    "dml_patch.sql"
+  ]
+}
